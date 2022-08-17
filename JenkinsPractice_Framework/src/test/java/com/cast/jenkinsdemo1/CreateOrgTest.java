@@ -17,14 +17,17 @@ public class CreateOrgTest {
 	{
 	WebDriverManager.chromedriver().setup(); 
 	WebDriver driver = new ChromeDriver();
-//		FileInputStream fis = new FileInputStream("./Data/CommonProperty.properties");
-//		Properties p = new Properties();
-//		
-//		p.load(fis);
-		
-		String URL=System.getProperty("url");
-		System.out.println(URL);
-		driver.get(URL);
+	FileInputStream fis = new FileInputStream("./Data/CommonProperty.properties");
+	Properties p = new Properties();
+	p.load(fis);
+	String Url=p.getProperty("url");
+	driver.get(Url);
+//		String URL=System.getProperty("url");
+//		System.out.println(URL);
+//		driver.get(URL);
 	System.out.println("Organization Created1111");
+	System.out.println("Test Script");
+	System.out.println("Failed");
+	System.out.println("Passed test scrpt");
 }
 }
